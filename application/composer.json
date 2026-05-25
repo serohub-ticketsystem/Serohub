@@ -1,0 +1,6 @@
+{
+    "require": {
+        "web-auth/webauthn-lib": "^4.9",
+        "minishlink/web-push": "^8.0"
+    }
+}
