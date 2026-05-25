@@ -1,120 +1,313 @@
 # SeroHub
-SeroHub ist eine moderne All-in-One Plattform für IT-Service, Helpdesk und Unternehmensverwaltung.
-Das System kombiniert ein Ticketsystem mit Kunden- und Firmenverwaltung, Inventarverwaltung, Projekten, Wissensdatenbank, Bestellungen, Kalenderfunktionen und vielen weiteren Tools für IT-Dienstleister und Unternehmen.
+
+## Modernes Helpdesk-, Ticketsystem- und Unternehmensmanagement-System
+
+SeroHub ist eine moderne All-in-One Plattform für IT-Dienstleister, Unternehmen und Support-Teams.
+
+Das System kombiniert ein klassisches Ticketsystem mit einer umfangreichen Firmen-, Kunden-, Inventar- und Projektverwaltung. Zusätzlich bietet SeroHub viele weitere Werkzeuge wie Wissensdatenbanken, Kalender, Bestellungen, Zeiterfassung und interne Verwaltungsfunktionen.
+
+SeroHub wurde entwickelt, um den kompletten Arbeitsalltag eines IT-Dienstleisters oder internen IT-Teams zentral in einem System abzubilden.
+
 ---
-# ⚠️ Beta Hinweis
-SeroHub befindet sich aktuell noch in der Beta-Phase.
-Der Installationsprozess wird in zukünftigen Versionen weiter verbessert und vereinfacht.  
-Aktuell müssen einige Schritte noch manuell durchgeführt werden.
-Fehler, unvollständige Funktionen oder Änderungen an der Datenbankstruktur sind möglich.
+
+# ⚠️ Beta Status
+
+## Wichtig
+
+SeroHub befindet sich aktuell noch in einer frühen Beta-Phase.
+
+Der Installationsprozess ist derzeit noch nicht vollständig automatisiert und wird in zukünftigen Versionen deutlich verbessert und vereinfacht.
+
+Aktuell müssen einige Konfigurationsschritte noch manuell durchgeführt werden.
+
+Außerdem können:
+
+- Fehler auftreten
+- Funktionen verändert werden
+- Datenbankstrukturen angepasst werden
+- neue Features hinzugefügt werden
+- unvollständige Funktionen vorhanden sein
+
+Dieses Repository dient aktuell hauptsächlich zu Entwicklungs- und Testzwecken.
+
 ---
-# Funktionen
-- Ticketsystem
-- Firmen- & Kundenverwaltung
-- Geräte- & Inventarverwaltung
-- Projekte & Aufgaben
-- Wissensdatenbank
-- Kalender mit CalDAV Unterstützung
-- Zeiterfassung
-- Interner Onlineshop
-- Bestellungen & Lagerbuchungen
-- Dashboard mit Benachrichtigungen
-- Mailversand & Ticket-Erstellung per Mail
+
+# Hauptfunktionen
+
+## Ticketsystem
+
+- Ticketverwaltung
+- Prioritäten & Status
+- Bearbeitungszeiten
+- Ticketabrechnung
+- Mail-zu-Ticket Funktion
+- Kommentare & Verlauf
+- Verknüpfungen mit Projekten, Bestellungen und Aufgaben
+
+---
+
+## Firmen- & Kundenverwaltung
+
+- Firmen anlegen und verwalten
+- Kunden Firmen zuweisen
+- Ansprechpartner verwalten
+- Firmennotizen
+- Gesprächsnotizen
 - Wartungsverträge
-- Rollen- & Rechteverwaltung
-- 2FA Unterstützung
+- Zahlungserinnerungen
+
+---
+
+## Inventar & Geräteverwaltung
+
+- Geräte anlegen
+- Geräte Firmen oder Kunden zuweisen
+- Seriennummern verwalten
+- Garantieinformationen
+- Lagerverwaltung
+- Inventarbuchungen
+
+---
+
+## Projekte & Aufgaben
+
+- Projekte erstellen
+- Tickets Projekten zuweisen
+- Aufgaben verwalten
+- Fortschritt verfolgen
+- Teamverwaltung
+
+---
+
+## Kalender
+
+- Integrierter Kalender
+- CalDAV Unterstützung
+- Firmen- und Kundentermine
+- Projekttermine
+- Erinnerungen
+
+---
+
+## Wissensdatenbank
+
+- Interne Wissensdatenbank
+- Kunden-Wissensdatenbank
+- Firmenspezifische Einträge
+- Schritt-für-Schritt Anleitungen
+- Notion-ähnliche Bedienung
+
+---
+
+## Bestellungen & Shop
+
+- Bestellungen direkt aus Tickets
+- Lagerartikel ausbuchen
+- Eigene Bestellungen erstellen
+- Interner Shop für Kunden/Firmen
+- Headsets, Tastaturen usw. direkt bestellbar
+
+---
+
+## Benutzerfunktionen
+
+- Rollenverwaltung
+- Admins
+- Techniker
+- Firmenkunden
 - Einfache Ansicht für ältere Nutzer
-- Globaler Firmenfilter
+- 2FA Unterstützung
+- Benachrichtigungssystem
+
+---
+
+## Weitere Funktionen
+
+- Dashboard mit Karten
+- Systemweite Infobars
+- Umfragen
 - Globale Suche
-- Anpassbares Branding
+- Globaler Firmenfilter
+- Verknüpfungen & Downloads
+- Mailversand & Mail-Empfang
+- Branding & Anpassungen
+- Gimmick-Seite mit Rekorden & Glücksrad
+
 ---
+
 # Systemanforderungen
-Benötigt wird ein Server mit:
-- Linux
+
+Für den Betrieb wird ein eigener Server benötigt.
+
+## Unterstützte Umgebung
+
+- Linux Server
 - Apache2
-- MySQL / MariaDB
-- PHP 8+
-Empfohlen:
-- SSL / HTTPS
-- phpMyAdmin
-- Cronjobs
+- MySQL oder MariaDB
+- PHP 8.0 oder neuer
+
 ---
+
 # Installation
-## 1. Dateien hochladen
-Den Inhalt des Ordners `application` auf den Webserver hochladen.
-Beispiel:
 
+## 1. Repository herunterladen
+
+Repository herunterladen oder klonen.
+
+---
+
+## 2. Dateien hochladen
+
+Im Projekt befindet sich der Ordner:
+
+```txt
+application
+```
+
+Der komplette Inhalt dieses Ordners muss auf den Webserver hochgeladen werden.
+
+Beispielpfad:
+
+```txt
 /var/www/html/
+```
 
-⸻
+oder
 
-2. Datenbank erstellen
+```txt
+/home/webserver/public_html/
+```
+
+---
+
+## 3. Datenbank erstellen
 
 Eine neue MySQL/MariaDB Datenbank anlegen.
 
 Danach die Datei:
 
+```txt
 database.sql
+```
 
-in die Datenbank importieren.
+importieren.
 
-⸻
+Dies kann beispielsweise über:
 
-3. Datenbankzugang konfigurieren
+- phpMyAdmin
+- Adminer
+- MySQL CLI
+
+erfolgen.
+
+---
+
+## 4. Datenbank konfigurieren
 
 Die Datei:
 
+```txt
 /assets/config.php
+```
 
-öffnen und die Zugangsdaten der Datenbank eintragen.
+öffnen.
+
+Dort müssen die Zugangsdaten der Datenbank eingetragen werden.
 
 Beispiel:
 
+```php
 $db_host = "localhost";
 $db_name = "serohub";
 $db_user = "root";
 $db_pass = "password";
+```
 
-⸻
+---
 
-4. Apache & PHP konfigurieren
+## 5. Apache konfigurieren
 
 Sicherstellen, dass:
 
-* mod_rewrite aktiviert ist
-* PHP korrekt eingerichtet ist
-* Schreibrechte gesetzt sind
+- PHP aktiviert ist
+- mod_rewrite aktiviert ist
+- Schreibrechte korrekt gesetzt sind
+- HTTPS verwendet wird
 
-⸻
+---
 
-5. Fertig
+## 6. Fertig
 
-Danach kann SeroHub im Browser geöffnet werden.
+Danach kann SeroHub über den Browser aufgerufen werden.
 
 Beispiel:
 
-https://deine-domain.de
+```txt
+https://example.com
+```
 
-⸻
+---
 
-Sicherheit
+# Empfohlene PHP Erweiterungen
 
-Vor dem produktiven Einsatz sollten:
+- mysqli
+- pdo_mysql
+- mbstring
+- curl
+- openssl
+- json
+- fileinfo
 
-* sichere Passwörter verwendet werden
-* HTTPS aktiviert sein
-* Dateiberechtigungen geprüft werden
-* regelmäßige Backups eingerichtet werden
+---
 
-⸻
+# Sicherheitshinweise
 
-Lizenz
+Vor dem produktiven Einsatz wird empfohlen:
 
-Aktuell keine öffentliche Lizenz festgelegt.
+- HTTPS zu aktivieren
+- sichere Datenbankpasswörter zu verwenden
+- regelmäßige Backups anzulegen
+- Schreibrechte zu prüfen
+- den Server aktuell zu halten
 
-⸻
+---
 
-Hinweis
+# Roadmap
 
-Dieses Projekt befindet sich weiterhin in aktiver Entwicklung.
-Änderungen an Funktionen, Datenbankstruktur oder APIs sind jederzeit möglich.
+Geplante Verbesserungen:
+
+- Automatischer Installer
+- Docker Support
+- API Erweiterungen
+- Mobile Optimierungen
+- Erweiterte Rechteverwaltung
+- Mehr Automatisierungen
+- Erweiterte Statistiken
+
+---
+
+# Hinweis zur Entwicklung
+
+SeroHub wird aktiv entwickelt.
+
+Dadurch können sich:
+
+- Funktionen
+- APIs
+- Datenbankstrukturen
+- Designs
+- Konfigurationen
+
+jederzeit ändern.
+
+---
+
+# Lizenz
+
+Aktuell wurde noch keine öffentliche Lizenz festgelegt.
+
+---
+
+# Kontakt
+
+Weitere Informationen folgen in zukünftigen Versionen.
