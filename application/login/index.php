@@ -541,7 +541,7 @@ $loginTitle = trim($parts[0] . ' ' . $parts[1]) . ' – Anmeldung';
 $loginFavicon = '../assets/images/Serohub_Icon.png';
 $loginCards = [
     ['label' => 'E-Mail', 'value' => 'support@serohub.de', 'href' => 'mailto:support@serohub.de', 'icon_type' => 'fa', 'icon' => 'fas fa-envelope'],
-    ['label' => 'Higtech', 'value' => 'Der Technik Onlineshop', 'href' => 'https://higtech.de', 'icon_type' => 'fa', 'icon' => 'fa-solid fa-bag-shopping'],
+    ['label' => 'Serohub', 'value' => 'Die All-in-One Plattform für IT-Dienstleister', 'href' => 'https://serohub.de', 'icon_type' => 'fa', 'icon' => 'fa-solid fa-s'],
     ['label' => 'Wissensdatenbank', 'value' => 'Hilfe & Anleitungen', 'href' => '../knowledge/', 'icon_type' => 'fa', 'icon' => 'fas fa-book']
 ];
 $loginFooterLinks = [
