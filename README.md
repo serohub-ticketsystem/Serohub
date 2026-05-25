@@ -43,7 +43,7 @@ Empfohlen:
 ## 1. Dateien hochladen
 Den Inhalt des Ordners `application` auf den Webserver hochladen.
 Beispiel:
-```txt
+
 /var/www/html/
 
 ⸻
