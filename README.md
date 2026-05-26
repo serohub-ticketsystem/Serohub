@@ -8,29 +8,6 @@ Das System kombiniert ein klassisches Ticketsystem mit einer umfangreichen Firme
 
 SeroHub wurde entwickelt, um den kompletten Arbeitsalltag eines IT-Dienstleisters oder internen IT-Teams zentral in einem System abzubilden.
 
----
-
-# ⚠️ Beta Status
-
-## Wichtig
-
-SeroHub befindet sich aktuell noch in einer frühen Beta-Phase.
-
-Der Installationsprozess ist derzeit noch nicht vollständig automatisiert und wird in zukünftigen Versionen deutlich verbessert und vereinfacht.
-
-Aktuell müssen einige Konfigurationsschritte noch manuell durchgeführt werden.
-
-Außerdem können:
-
-- Fehler auftreten
-- Funktionen verändert werden
-- Datenbankstrukturen angepasst werden
-- neue Features hinzugefügt werden
-- unvollständige Funktionen vorhanden sein
-
-Dieses Repository dient aktuell hauptsächlich zu Entwicklungs- und Testzwecken.
-
----
 
 # Hauptfunktionen
 
